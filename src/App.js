@@ -35,14 +35,14 @@ function App() {
     const price = value / rates.current[toCurrency] 
     const result = price * rates.current[fromCurrency]
     setFromPrice(value)
-    setToPrice(result)
+    setToPrice(result.toFixed(2))
   }
 
   // Change second price method
   const onChangeToPrice = (value) => {
     const price = value / rates.current[fromCurrency] 
     const result = price * rates.current[toCurrency]
-    setFromPrice(result)
+    setFromPrice(result.toFixed(2))
     setToPrice(value)
   }
 
